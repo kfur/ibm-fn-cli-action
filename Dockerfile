@@ -1,11 +1,11 @@
 FROM alpine:3.8
 
-LABEL "name"="Cloud Foundry CLI Action"
-LABEL "maintainer"="ltlamontagne@gmail.com>"
+LABEL "name"="IBM Functions Update Action"
+LABEL "maintainer"="noone@gmail.com>"
 LABEL "version"="1.0.1"
 
-LABEL "com.github.actions.name"="GitHub Action for Cloud Foundry"
-LABEL "com.github.actions.description"="Wraps the Cloud foundry CLI to enable CF commands."
+LABEL "com.github.actions.name"="GitHub Action for IBM Functions Update"
+LABEL "com.github.actions.description"="Wraps the IBM Functions CLI to enable for updating purpose."
 LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="green"
 
@@ -17,7 +17,7 @@ RUN ibmcloud plugin install cloud-functions
 # Install Cloud Foundry cli
 RUN ibmcloud cf install
 
-COPY LICENSE README.md /
+COPY README.md /
 
 COPY entrypoint.sh /entrypoint.sh
 
