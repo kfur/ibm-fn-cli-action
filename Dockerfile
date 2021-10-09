@@ -11,7 +11,7 @@ LABEL "com.github.actions.color"="green"
 
 # Install uuidgen
 RUN apk add --no-cache ca-certificates curl bash jq util-linux
-RUN curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+RUN curl -kfsSL https://clis.cloud.ibm.com/install/linux | sh
 RUN ibmcloud plugin install cloud-functions
 
 # Install Cloud Foundry cli
